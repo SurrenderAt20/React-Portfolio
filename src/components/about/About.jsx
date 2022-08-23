@@ -20,25 +20,29 @@ export default function About() {
         </div>
 
         <div className="about__content">
-          <div className="about__cards">
 
+          <div className="about__cards">
             <article className='about__card'>
               <FaAward className='about__icon'/>
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>3+ Years Working <br /></small>
+              <small>BA Web Dev</small>
             </article>
 
             <article className='about__card'>
               <FiUsers className='about__icon'/>
-              <h5>Clients</h5>
-              <small>200+ Worldwide</small>
+              <h5>Team Player</h5>
+              <small>Inspires the collective</small>
             </article>
 
             <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
-              <small>80+ Completed Projects</small>
+              <small>30+ Completed Projects</small>
             </article>
+
+            
+          </div>
 
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                Voluptas laudantium blanditiis saepe itaque in atque mollitia dolorum unde
@@ -46,8 +50,7 @@ export default function About() {
             </p>
 
             <a href='#contact' className='btn btn-primary'> Button </a>
-            
-          </div>
+
         </div>
 
       </div>

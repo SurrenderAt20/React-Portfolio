@@ -22,7 +22,7 @@ export default function Portfolio() {
     {
       id: 2,
       image: IMG2,
-      title: 'Placeholder one',
+      title: 'Placeholder Two',
       github: 'https://github.com',
       demo: 'https://google.com'
     },
@@ -30,7 +30,7 @@ export default function Portfolio() {
     {
       id: 3,
       image: IMG3,
-      title: 'Placeholder one',
+      title: 'Placeholder Three',
       github: 'https://github.com',
       demo: 'https://google.com'
     },
@@ -38,7 +38,7 @@ export default function Portfolio() {
     {
       id: 4,
       image: IMG4,
-      title: 'Placeholder one',
+      title: 'Placeholder Four',
       github: 'https://github.com',
       demo: 'https://google.com'
     },
@@ -46,7 +46,7 @@ export default function Portfolio() {
     {
       id: 5,
       image: IMG5,
-      title: 'Placeholder one',
+      title: 'Placeholder Five',
       github: 'https://github.com',
       demo: 'https://google.com'
     },
@@ -54,7 +54,7 @@ export default function Portfolio() {
     {
       id: 6,
       image: IMG6,
-      title: 'Placeholder one',
+      title: 'Placeholder Six',
       github: 'https://github.com',
       demo: 'https://google.com'
     },
@@ -74,76 +74,26 @@ export default function Portfolio() {
 
       <div className="container portfolio__container">
 
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG1} alt="" />
-            <h3>This is a portfolio item title</h3>
-            <div className="portfolio__item-cta">
-            <a href="https://github.com" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com" className='btn btn-primary' target='_blank'>Demo</a>
-            </div>
-          </div>
-        </article>
+        {
+          
 
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG2} alt="" />
-            <h3>This is a portfolio item title</h3>
-            <div className="portfolio__item-cta">
-            <a href="https://github.com" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com" className='btn btn-primary' target='_blank'>Demo</a>
-            </div>
-          </div>
-        </article>
+          data.map( ({id, image, title, github, demo}) => {
+            return (
 
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG3} alt="" />
-            <h3>This is a portfolio item title</h3>
-            <div className="portfolio__item-cta">
-            <a href="https://github.com" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com" className='btn btn-primary' target='_blank'>Demo</a>
-            </div>
-          </div>
-        </article>
+            <article key={id} className="portfolio__item">
+              <div className="portfolio__item-image">
+                <img src={image} alt={title} />
+                <h3>{title}</h3>
+                <div className="portfolio__item-cta">
+                <a href={github} className='btn' target='_blank'>Github</a>
+                <a href={demo} className='btn btn-primary' target='_blank'>Demo</a>
+                </div>
+              </div>
+            </article>
 
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG4} alt="" />
-            <h3>This is a portfolio item title</h3>
-            <div className="portfolio__item-cta">
-            <a href="https://github.com" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com" className='btn btn-primary' target='_blank'>Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG5} alt="" />
-            <h3>This is a portfolio item title</h3>
-            <div className="portfolio__item-cta">
-            <a href="https://github.com" className='btn' target='_blank'>Github</a>
-            <a href="https://github.com" className='btn btn-primary' target='_blank'>Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG6} alt="" />
-            <h3>This is a portfolio item title</h3>
-            <div className="portfolio__item-cta">
-              <a href="https://github.com" className='btn' target='_blank'>Github</a>
-              <a href="https://github.com" className='btn btn-primary' target='_blank'>Demo</a>
-            </div>
-          </div>
-        </article>
-
-        
-
-        
-
+            )
+          })
+        }
 
       </div>
     </section>

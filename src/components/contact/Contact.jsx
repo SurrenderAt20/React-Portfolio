@@ -1,14 +1,20 @@
-import React from 'react'
+/* import React, { useState } from 'react' */
 import './Contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import {AiTwotonePhone} from 'react-icons/ai'
-import {useRef} from 'react';
+import {useRef, useState} from 'react';
 import emailjs from 'emailjs-com';
 
 
 export default function Contact() {
   const form = useRef();
+
+  
+  const [enteredName, setEnteredName] = useState()
+  const [enteredEmail, setEnteredEmail] = useState()
+  const [enteredMessage, setEnteredMessage] = useState()
+
 
 
   const sendEmail = (e) => {
@@ -20,8 +26,13 @@ export default function Contact() {
       }, (error) => {
           console.log(error.text);
       });
-  };
 
+      setEnteredName('');
+      setEnteredEmail('');
+      setEnteredMessage('');
+
+    };
+    
 
   return (
 
@@ -54,11 +65,11 @@ export default function Contact() {
       </article>
       </div>
 
-        <form href={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Your Full Name' required />
-          <input type="email" name='email' placeholder='Your Email' required />
-          <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
-          <button className='btn btn-primary' type='submit'>Send Message</button>
+        <form ref={form} onSubmit={sendEmail}>
+          <input type="text" name='name' placeholder='Your Full Name' value={enteredName} required />
+          <input type="email" name='email' placeholder='Your Email' value={enteredEmail} required />
+          <textarea name="message" rows="7" placeholder='Your Message' value={enteredMessage} required></textarea>
+          <button className='btn btn-primary' type='submit' value="Send">Send Message</button>
         </form>
 
         </div>
