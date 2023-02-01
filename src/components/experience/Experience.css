@@ -62,9 +62,14 @@
 
 @media screen and (max-width: 600px) {
 
+    .experience__frontend{
+        display: flex;
+        flex-direction: column;
+    }
+
     .experience__container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .experience__container > div {

@@ -22,6 +22,10 @@
     overflow: hidden;
 }
 
+.portfolio__item-image img {
+    max-height: 15rem;
+}
+
 .portfolio__item h3 {
     margin: 1.2rem 0 2rem;
 }
@@ -43,6 +47,11 @@
     .portfolio__container{
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .portfolio__item-cta {
+        display: flex;
+        justify-content: center;
     }
 
 }
