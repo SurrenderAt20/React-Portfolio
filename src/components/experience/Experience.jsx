@@ -14,7 +14,7 @@ export default function Experience() {
           <div className="experience__content">
             <article className="experience__details">
               <BsPatchCheckFill className="experience__details-icon" />
-              <div>
+              <div className="experience__elements">
                 <h4>HTML</h4>
                 <small className="text-light">Expert</small>
               </div>

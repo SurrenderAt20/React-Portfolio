@@ -3,7 +3,7 @@ import "./Portfolio.css";
 import IMG1 from "../../assets/FITFIX.png";
 import IMG2 from "../../assets/pday.jpg";
 import IMG3 from "../../assets/portfolio3.jpg";
-import IMG4 from "../../assets/portfolio4.jpg";
+import IMG4 from "../../assets/portfolio.png";
 import IMG5 from "../../assets/portfolio5.png";
 import IMG6 from "../../assets/portfolio6.jpg";
 
@@ -36,8 +36,8 @@ export default function Portfolio() {
     {
       id: 4,
       image: IMG4,
-      title: "Placeholder Four",
-      github: "https://github.com",
+      title: "Portfolio Website made with React",
+      github: "https://github.com/SurrenderAt20/React-Portfolio",
       demo: "https://google.com",
     },
 

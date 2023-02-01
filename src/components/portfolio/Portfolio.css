@@ -54,4 +54,9 @@
         justify-content: center;
     }
 
+    .portfolio__item-image h3 {
+        display: flex;
+        text-align: center;
+    }
+
 }
